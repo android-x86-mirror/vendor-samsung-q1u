@@ -34,7 +34,10 @@ $(eval $(call add-prebuilt-target,$(TARGET_ROOT_OUT),init.rc))
 $(INSTALLED_RAMDISK_TARGET): $(file)
 $(eval $(call add-prebuilt-target,$(TARGET_ROOT_OUT),init.q1u.rc))
 $(INSTALLED_RAMDISK_TARGET): $(file)
-$(eval $(call add-prebuilt-target,$(TARGET_OUT_DATA_ETC),init.q1u.sh))
+
+$(eval $(call add-prebuilt-target,$(TARGET_OUT_DATA_ETC),pointercal))
+$(eval $(call add-prebuilt-target,$(TARGET_OUT_DATA_ETC),ts.conf))
+$(eval $(call add-prebuilt-target,$(TARGET_OUT_DATA_ETC),ts.env))
 
 ALL_FIRMWARES := $(shell cd $(LOCAL_PATH) && find firmware -type f)
 $(eval $(foreach f,$(ALL_FIRMWARES),$(call add-prebuilt-target,$(TARGET_OUT_SHARED_LIBRARIES),$(f))))

@@ -11,4 +11,5 @@ on boot
     setprop alsa.mixer.capture.earpiece Capture
     setprop alsa.mixer.playback.headset Master
     setprop alsa.mixer.playback.speaker Master
+    export LD_PRELOAD /lib/libts.so:/lib/ts/pthres.so
 

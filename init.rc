@@ -16,8 +16,8 @@ loglevel 3
     export BOOTCLASSPATH /system/framework/core.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/android.policy.jar:/system/framework/services.jar
 
 # Backward compatibility
-    symlink system/etc /etc
-    symlink system/lib /lib
+    symlink /system/etc /etc
+    symlink /system/lib /lib
 
 # create mountpoints and mount tmpfs on sqlite_stmt_journals and debugfs on d
     mkdir /d
