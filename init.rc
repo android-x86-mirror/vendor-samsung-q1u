@@ -88,6 +88,13 @@ loglevel 3
     chown root root /cache/lost+found
     chmod 0770 /cache/lost+found
 
+    # setup for pointercal
+    mkdir /data/system/tslib 755 1000 1000
+    copy /system/etc/pointercal /data/system/tslib/pointercal
+    chmod 666 /data/system/tslib/pointercal
+    chown 1000 1000 /data/system/tslib/pointercal
+    # this has to be done before servicemanager and zygote
+
 
 ### Load some modules
 

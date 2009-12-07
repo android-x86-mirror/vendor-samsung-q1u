@@ -12,7 +12,3 @@ on boot
     setprop alsa.mixer.playback.headset Master
     setprop alsa.mixer.playback.speaker Master
     export LD_PRELOAD /lib/libts.so:/lib/ts/pthres.so
-
-service tslib /system/bin/sh /system/etc/ins_pointercal.sh
-    oneshot
-
