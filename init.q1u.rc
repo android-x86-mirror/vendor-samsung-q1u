@@ -1,14 +1,2 @@
 on boot
-    setprop ro.radio.use-ppp no
-    setprop ro.radio.noril yes
-    setprop status.battery.state Slow
-    setprop status.battery.level 5
-    setprop status.battery.level_raw  50
-    setprop status.battery.level_scale 9
-    setprop alsa.mixer.playback.master Master
-    setprop alsa.mixer.capture.master Capture
-    setprop alsa.mixer.playback.earpiece Master
-    setprop alsa.mixer.capture.earpiece Capture
-    setprop alsa.mixer.playback.headset Master
-    setprop alsa.mixer.playback.speaker Master
-    export LD_PRELOAD /lib/libts.so:/lib/ts/pthres.so
+    export LD_PRELOAD /system/lib/libts.so:/system/lib/ts/pthres.so

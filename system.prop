@@ -1,7 +1,0 @@
-# system.prop for q1u
-ro.config.sync = yes
-app.setupwizard.disable=1
-#keyguard.no_require_sim=1
-ro.alarm.volume.adjustable=true
-#ro.simulated.phone=true
-# end system.prop for q1u

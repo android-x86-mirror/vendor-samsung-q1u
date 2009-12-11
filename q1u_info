@@ -1,0 +1,25 @@
+DMIPATH=/sys/class/dmi/id
+
+q1u_info()
+{
+	[ -c /dev/fb0 ] || FB0DEV=i915
+	EXTMOD=hso
+	PREDEV=snd-hda-codec-realtek mii rfkill
+	SNDDEV=snd-hda-intel
+	CAMDEV=gspca_vc032x
+	WIFDEV=ath5k
+	LANDEV=b44
+	BOARD_USES_TSLIB=true
+}
+
+detect_hardware()
+{
+	case "`cat $DMIPATH/uevent`" in
+		*SAMSUNG*)
+			q1u_info
+			;;
+		*)
+			error WARNING: Not an SAMSUNG product
+			;;
+	esac
+}
