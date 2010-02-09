@@ -254,6 +254,18 @@ service hsag /system/bin/sdptool add --channel=11 HSAG
     disabled
     oneshot
 
+service ril-daemon /system/bin/rild -l /system/lib/libreference-ril.so -- -d /dev/ttyUSB1
+    socket rild stream 660 root radio
+    socket rild-debug stream 660 radio system
+    user root
+    group radio cache inet misc
+
+service ppp /system/bin/pppd call gprs
+    user root
+    group system radio
+    disabled
+    oneshot
+
 #Please do not change anything below this line. If you want to add new service, add it above this line
 #REMOVE FROM HERE
 service dhcpcd /system/bin/dhcpcd wlan0
