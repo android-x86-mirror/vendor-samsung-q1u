@@ -30,7 +30,7 @@ TARGET_USE_DISKINSTALLER := true
 LOCAL_PATH := $(call my-dir)
 TARGET_DISK_LAYOUT_CONFIG := $(LOCAL_PATH)/disk_layout.conf
 
-BOARD_KERNEL_CMDLINE := root=/dev/ram0 androidboot.hardware=q1u acpi_sleep=s3_bios,s3_mode
+BOARD_KERNEL_CMDLINE := root=/dev/ram0 androidboot_hardware=q1u acpi_sleep=s3_bios,s3_mode
 
 
 BOARD_BOOTIMAGE_MAX_SIZE := 8388608
