@@ -10,6 +10,7 @@ PRODUCT_PACKAGES := \
 	FileManager \
 	GlobalTime \
 	JETBoy \
+	LIME \
 	LunarLander \
 	NotePad \
 	PinyinIME \
